@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<%- include('../partials/head') %>
+
+    <body class="container" style="padding-top: 50">
+        <%- include('../partials/header') %>
+            <main>
+                <div class="jumbotron">
+                    <h1>Node + EJS</h1>
+                    <p>Discover Node + EJS</p>
+                    <button>Chamada API</button>
+                </div>
+
+                <% usuarios.forEach(function(user){ %>
+                    <strong>
+                        <%= user.name %>
+                    </strong><br />
+                    <strong>
+                        <%= user.age %>
+                    </strong><br />
+                    <strong>
+                        <%= user.city %>
+                    </strong><br />
+                    <br />
+                    <br />
+                <% }) %>
+            </main>
+
+            <%- include('../partials/footer') %>
+
+                <script src="/jquery.min.js"></script>
+                <script src="/script_jquery.js"></script>
+    </body>
+
+</html>
